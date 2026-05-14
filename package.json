@@ -1,0 +1,45 @@
+{
+  "name": "sde-fullstack-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NestJS and NextJS full-stack message board challenge.",
+  "license": "UNLICENSED",
+  "packageManager": "npm@11.11.0",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "node scripts/eslint-runner.cjs apps/api/src apps/api/prisma apps/web/app apps/web/components apps/web/lib apps/web/scripts packages/shared/src scripts",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "api:dev": "npm run dev -w @sde-challenge/api",
+    "api:build": "npm run build -w @sde-challenge/api",
+    "api:start": "npm run start -w @sde-challenge/api",
+    "api:typecheck": "npm run typecheck -w @sde-challenge/api",
+    "api:prisma:generate": "npm run prisma:generate -w @sde-challenge/api",
+    "api:prisma:migrate": "npm run prisma:migrate -w @sde-challenge/api --",
+    "api:prisma:seed": "npm run prisma:seed -w @sde-challenge/api",
+    "api:prisma:studio": "npm run prisma:studio -w @sde-challenge/api",
+    "web:dev": "npm run dev -w @sde-challenge/web",
+    "web:build": "npm run build -w @sde-challenge/web",
+    "web:start": "npm run start -w @sde-challenge/web",
+    "web:typecheck": "npm run typecheck -w @sde-challenge/web",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f postgres"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.6.0",
+    "typescript-eslint": "^8.59.3"
+  }
+}

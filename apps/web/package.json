@@ -1,0 +1,24 @@
+{
+  "name": "@sde-challenge/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NextJS web app for the full-stack message board challenge.",
+  "scripts": {
+    "dev": "node scripts/next-runner.cjs dev -p 3000",
+    "build": "node scripts/next-runner.cjs build",
+    "start": "node scripts/next-runner.cjs start -p 3000",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^1.14.0",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.3"
+  }
+}

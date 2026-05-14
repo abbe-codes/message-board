@@ -1,0 +1,45 @@
+{
+  "name": "@sde-challenge/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NestJS API for the full-stack message board challenge.",
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "test": "jest --config jest.config.cjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prisma:generate": "dotenv -e ../../.env -- prisma generate --schema prisma/schema.prisma",
+    "prisma:migrate": "dotenv -e ../../.env -- prisma migrate dev --schema prisma/schema.prisma",
+    "prisma:seed": "dotenv -e ../../.env -- prisma db seed --schema prisma/schema.prisma",
+    "prisma:studio": "dotenv -e ../../.env -- prisma studio --schema prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.20",
+    "@nestjs/config": "^4.0.4",
+    "@nestjs/core": "^11.1.20",
+    "@nestjs/jwt": "^11.0.2",
+    "@nestjs/platform-express": "^11.1.20",
+    "@prisma/client": "^6.19.0",
+    "bcryptjs": "^3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "cookie-parser": "^1.4.7",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.21",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.7.0",
+    "dotenv-cli": "^11.0.0",
+    "jest": "^30.4.2",
+    "prisma": "^6.19.0",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

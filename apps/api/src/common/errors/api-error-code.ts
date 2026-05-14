@@ -1,0 +1,9 @@
+export type ApiErrorCode =
+  | 'BAD_REQUEST'
+  | 'VALIDATION_ERROR'
+  | 'UNAUTHORIZED'
+  | 'FORBIDDEN'
+  | 'NOT_FOUND'
+  | 'CONFLICT'
+  | 'SERVICE_UNAVAILABLE'
+  | 'INTERNAL_SERVER_ERROR';
