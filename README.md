@@ -177,3 +177,4 @@ API errors use this normalized response shape:
 - `packages/shared` is reserved for shared contracts
 
 See `ARCHITECTURE.md` for design decisions, trade-offs, scaling notes, and next steps.
+See `HIGH_READ_LOAD.md` for the bonus high-read-load answer.

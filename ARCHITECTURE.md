@@ -79,6 +79,8 @@ For higher traffic, the first scaling moves are straightforward:
 
 For very large feeds, introduce a search/indexing layer for tag and text queries, archive older messages, and consider event-driven fanout if the product evolves into personalized timelines.
 
+The dedicated bonus answer is in `HIGH_READ_LOAD.md`.
+
 ## Next Steps
 
 - Add end-to-end tests for login, posting, filtering, editing, and deleting.
