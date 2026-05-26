@@ -3,6 +3,7 @@
 const { existsSync } = require('node:fs');
 const { spawnSync } = require('node:child_process');
 const path = require('node:path');
+const { logger } = require('../../../scripts/logger.cjs');
 
 const nextBin = path.resolve(__dirname, '..', '..', '..', 'node_modules', 'next', 'dist', 'bin', 'next');
 const systemNode = 'C:\\Program Files\\nodejs\\node.exe';
@@ -17,7 +18,7 @@ const result = spawnSync(nodeBinary, [nextBin, ...process.argv.slice(2)], {
 });
 
 if (result.error) {
-  console.error(result.error);
+  logger.error(result.error);
   process.exit(1);
 }
 

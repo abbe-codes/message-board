@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { hash } from 'bcryptjs';
+import { logger } from '@sde-challenge/shared';
 
 const prisma = new PrismaClient();
 
@@ -101,7 +102,7 @@ main()
     await prisma.$disconnect();
   })
   .catch(async (error) => {
-    console.error(error);
+    logger.error('Prisma seed failed', error);
     await prisma.$disconnect();
     process.exit(1);
   });

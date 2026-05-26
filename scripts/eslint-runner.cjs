@@ -3,6 +3,7 @@
 const { existsSync } = require('node:fs');
 const { spawnSync } = require('node:child_process');
 const path = require('node:path');
+const { logger } = require('./logger.cjs');
 
 const eslintBin = path.resolve(__dirname, '..', 'node_modules', 'eslint', 'bin', 'eslint.js');
 const systemNode = 'C:\\Program Files\\nodejs\\node.exe';
@@ -17,7 +18,7 @@ const result = spawnSync(nodeBinary, [eslintBin, ...process.argv.slice(2)], {
 });
 
 if (result.error) {
-  console.error(result.error);
+  logger.error(result.error);
   process.exit(1);
 }
 
